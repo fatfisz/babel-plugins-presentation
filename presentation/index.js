@@ -123,6 +123,12 @@ export default class Presentation extends Component {
         </Slide>
 
         <Slide bgColor='tertiary'>
+          <Heading fit caps textColor='primary'>
+            BTW.
+          </Heading>
+        </Slide>
+
+        <Slide bgColor='tertiary'>
           <Heading fit textColor='primary'>
             Have you heard of macros?
           </Heading>
@@ -310,33 +316,49 @@ export default class Presentation extends Component {
         </Slide>
 
         <Slide bgColor='tertiary'>
-          <Heading size={1} textColor='primary'>
+          <Heading fit caps textColor='primary'>
+            Let's sum it up
+          </Heading>
+        </Slide>
+
+        <Slide>
+          <Heading size={1}>
             Pros:
           </Heading>
           <List>
-            <ListItem>
-              Decoupled from Webpack - testing just works!
-            </ListItem>
-            <ListItem>
-              Reducing bundle size
-            </ListItem>
-            <ListItem>
-              Reducing runtime cost
-            </ListItem>
+            <Appear>
+              <ListItem>
+                Decoupled from Webpack - testing just works!
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Reducing bundle size
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Reducing runtime cost
+              </ListItem>
+            </Appear>
           </List>
         </Slide>
 
-        <Slide bgColor='tertiary'>
-          <Heading size={2} textColor='primary'>
+        <Slide>
+          <Heading size={2} textColor='tertiary'>
             Pitfalls:
           </Heading>
           <List>
-            <ListItem>
-              Introducing magic (not for macros, though)
-            </ListItem>
-            <ListItem>
-              Caching problems if plugin is not pure
-            </ListItem>
+            <Appear>
+              <ListItem>
+                Introducing magic (not for macros, though)
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Caching problems if plugin is not pure
+              </ListItem>
+            </Appear>
           </List>
         </Slide>
 
