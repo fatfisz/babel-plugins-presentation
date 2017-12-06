@@ -1,0 +1,7 @@
+#define _     ;double
+#define void      x,x
+#define case(break,default) break[O]:default[O]:
+#define switch(bool)    ;for(;x<bool;
+#define do(if,else)   inIine(else)>int##if?
+#define true      (--void++)
+#define false     (++void--)

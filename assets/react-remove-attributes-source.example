@@ -1,0 +1,3 @@
+<Button compact type="primary" data-test-id="special-button">
+  Click me!
+</Button>

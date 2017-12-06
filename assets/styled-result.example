@@ -1,0 +1,7 @@
+const Nested = styled.div.withConfig({
+  displayName: "filename__Nested"
+})([
+  ["{width:100%;}"],
+  [":hover{color:papayawhip;}"],
+  [" > div{background:white;}"]
+]);
