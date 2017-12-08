@@ -1,3 +1,0 @@
-import resolveUrl from 'resolve-url.macro';
-
-await fetch(resolveUrl('task-details', task.id));

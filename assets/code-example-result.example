@@ -1,0 +1,5 @@
+<CodeExample code={"<Item>\n  Text\n</Item>"}>
+  <Item>
+    Text
+  </Item>
+</CodeExample>

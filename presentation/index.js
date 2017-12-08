@@ -53,87 +53,22 @@ export default class Presentation extends Component {
   render() {
     return (
       <Deck transition={['fade']} transitionDuration={500} theme={theme} progress='bar'>
-        <Slide>
-          <Heading fit caps>
+        <Slide bgColor='tertiary'>
+          <Heading fit caps textColor='primary'>
             what a concept:
           </Heading>
-          <Heading fit caps margin='20px 0 0'>
+          <Heading fit caps textColor='primary' margin='20px 0 0'>
             In-house Babel plugins
           </Heading>
-          <Image src={require('babel.svg')} height={200} margin='100px auto 0'/>
+          <Image src={require('babel.svg')} height={200} margin='50px auto 0'/>
         </Slide>
 
         <Slide>
           <Heading fit>
-            Babel started as an ES6 to ES5 converter
-          </Heading>
-          <Appear>
-            <Text bold margin='10px 0 0'>
-              In the beginning it was called "6to5"
-            </Text>
-          </Appear>
-        </Slide>
-
-        <Slide bgColor='tertiary'>
-          <Heading fit textColor='primary'>
-            Today Babel is so much more
-          </Heading>
-        </Slide>
-
-        <Slide>
-          <Heading fit>
-            We use it to transform JSX:
-          </Heading>
-          <CodePane lang='jsx' source={require('jsx-source.example')} margin='50px 0 0' />
-          <Text>
-            ⬇
-          </Text>
-          <CodePane lang='jsx' source={require('jsx-result.example')} margin='10px 0 0' />
-        </Slide>
-
-        <Slide>
-          <Heading fit>
-            We use it to transform styled-components:
-          </Heading>
-          <CodePane lang='jsx' source={require('styled-source.example')} margin='50px 0 0' />
-          <Text>
-            ⬇
-          </Text>
-          <CodePane lang='jsx' source={require('styled-result.example')} margin='10px 0 0' />
-        </Slide>
-
-        <Slide>
-          <Heading fit>
-            We use it to transform paths:
-          </Heading>
-          <CodePane lang='jsx' source={require('paths-source.example')} margin='50px 0 0' />
-          <Text>
-            ⬇
-          </Text>
-          <CodePane lang='jsx' source={require('paths-result.example')} margin='10px 0 0' />
-        </Slide>
-
-        <Slide bgColor='tertiary'>
-          <Heading fit caps textColor='primary'>
-            Babel plugins help you
-          </Heading>
-          <Heading fit caps textColor='primary' margin='10px 0 0'>
-            reduce boilerplate
-          </Heading>
-        </Slide>
-
-        <Slide bgColor='tertiary'>
-          <Heading fit caps textColor='primary'>
-            BTW.
-          </Heading>
-        </Slide>
-
-        <Slide bgColor='tertiary'>
-          <Heading fit textColor='primary'>
             Have you heard of macros?
           </Heading>
           <CodePane lang='c' source={require('c-macros.example')} margin='50px 0 0' />
-          <Text textColor='primary' textSize={20} margin='10px 0 0'>
+          <Text textSize={20} margin='10px 0 0'>
             Source: http://www.ioccc.org/2004/hoyle.c
           </Text>
         </Slide>
@@ -145,17 +80,17 @@ export default class Presentation extends Component {
           <List>
             <Appear>
               <ListItem>
-                Defined separately from code
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                Plugins operate on AST instead of text
+                Defined separately from code - separation of concerns
               </ListItem>
             </Appear>
             <Appear>
               <ListItem>
                 Can be tested properly
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Plugins operate on AST instead of text
               </ListItem>
             </Appear>
           </List>
@@ -238,92 +173,83 @@ export default class Presentation extends Component {
 
         <Slide bgColor='tertiary'>
           <Heading fit textColor='primary'>
-            Case study: Django routing in scripts
+            Case study: CodeExample
           </Heading>
         </Slide>
 
         <Slide>
           <Heading size={6} textColor='tertiary'>
-            Problem: referring to Django routes
+            Problem: presenting the code alongside<br />the component example
           </Heading>
         </Slide>
 
         <Slide>
           <Heading size={6} textColor='tertiary'>
-            How are we doing that now?
+            Inspired by Bootstrap docs
           </Heading>
-          <List>
-            <Appear>
-              <ListItem>
-                The routes are defined in <Code>urls.py</Code> files
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                Used routes are listed in a big dict
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                The dict is included in the template
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                Script reads the routes and wraps them in a utility
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                The route can be generated using passed arguments
-              </ListItem>
-            </Appear>
-          </List>
+          <Image src={require('bootstrap-example.png')} margin='50px auto 0'/>
         </Slide>
 
         <Slide>
           <Heading size={6} textColor='tertiary'>
-            How could we do it instead?
+            Solution:
           </Heading>
-          <List>
-            <ListItem>
-              The routes are defined in <Code>urls.py</Code> files
-            </ListItem>
-            <ListItem>
-              <S type='strikethrough'>Used routes are listed in a big dict</S>
-            </ListItem>
-            <ListItem>
-              <S type='strikethrough'>The dict is included in the template</S>
-            </ListItem>
-            <ListItem>
-              <S type='strikethrough'>Script reads the routes and wraps them in a utility</S>
-            </ListItem>
-            <ListItem>
-              The route can be generated using passed arguments
-            </ListItem>
-          </List>
-        </Slide>
-
-        <Slide>
-          <Heading size={6} textColor='tertiary'>
-            Suggested solution:
-          </Heading>
-          <CodePane lang='jsx' source={require('django-routing-source.example')} margin='50px 0 0' />
+          <CodePane lang='jsx' source={require('code-example-source.example')} margin='50px 0 0' />
           <Text>
             ⬇
           </Text>
-          <CodePane lang='jsx' source={require('django-routing-result.example')} margin='10px 0 0' />
+          <CodePane lang='jsx' source={require('code-example-result.example')} margin='10px 0 0' />
         </Slide>
 
-        <Slide bgColor='tertiary'>
+        <Slide>
+          <Heading size={6} textColor='tertiary'>
+            Result
+          </Heading>
+          <Image src={require('pattern-library-example.png')} margin='50px auto 0'/>
+        </Slide>
+
+        <Slide bgImage={require('what-is-my-purpose.png')} bgDarken={0.75}>
           <Heading fit caps textColor='primary'>
-            Let's sum it up
+            What is the purpose of
+          </Heading>
+          <Heading fit caps textColor='primary' margin='20px 0 0'>
+            macros?
           </Heading>
         </Slide>
 
         <Slide>
-          <Heading size={1}>
-            Pros:
+          <Heading fit>
+            Macros are useful for:
+          </Heading>
+          <List>
+            <Appear>
+              <ListItem>
+                Reducing boilerplate (syntactic sugar!)
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Stripping metadata
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Adding metadata
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Build-time computations<br />
+                (check out <Code>babel-plugin-preval</Code>!)<br />
+                (or <Code>babel-macros</Code>!)
+              </ListItem>
+            </Appear>
+          </List>
+        </Slide>
+
+        <Slide>
+          <Heading fit>
+            Benefits of custom Babel plugins:
           </Heading>
           <List>
             <Appear>
@@ -333,12 +259,12 @@ export default class Presentation extends Component {
             </Appear>
             <Appear>
               <ListItem>
-                Reducing bundle size
+                They help reduce the bundle size
               </ListItem>
             </Appear>
             <Appear>
               <ListItem>
-                Reducing runtime cost
+                They help reduce the runtime cost
               </ListItem>
             </Appear>
           </List>
@@ -351,12 +277,12 @@ export default class Presentation extends Component {
           <List>
             <Appear>
               <ListItem>
-                Introducing magic (not for macros, though)
+                Introducing magic ✨ (can be avoided, though)
               </ListItem>
             </Appear>
             <Appear>
               <ListItem>
-                Caching problems if plugin is not pure
+                Caching problems if the plugin is not pure
               </ListItem>
             </Appear>
           </List>

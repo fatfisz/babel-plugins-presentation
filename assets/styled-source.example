@@ -1,7 +1,0 @@
-const Nested = styled.div`
-  width: 100%;
-
-  &:hover { color: papayawhip; }
-
-  > div { background: white; }
-`;

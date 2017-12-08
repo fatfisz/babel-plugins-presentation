@@ -1,5 +1,0 @@
-return (
-  <Deck transition={['zoom','slide']} transitionDuration={800}>
-    asdasdasdasdasdasdasdas
-  </Deck>
-)
