@@ -60,7 +60,10 @@ export default class Presentation extends Component {
           <Heading fit caps textColor='primary' margin='20px 0 0'>
             In-house Babel plugins
           </Heading>
-          <Image src={require('babel.svg')} height={200} margin='50px auto 0'/>
+          <Image src={require('babel.svg')} height={200} margin='50px auto 0' />
+          <Text bold textColor='primary' margin='50px auto 0'>
+            by Rafał Ruciński (@fatfisz)
+          </Text>
         </Slide>
 
         <Slide>
@@ -187,7 +190,7 @@ export default class Presentation extends Component {
           <Heading size={6} textColor='tertiary'>
             Inspired by Bootstrap docs
           </Heading>
-          <Image src={require('bootstrap-example.png')} margin='50px auto 0'/>
+          <Image src={require('bootstrap-example.png')} margin='50px auto 0' />
         </Slide>
 
         <Slide>
@@ -205,7 +208,7 @@ export default class Presentation extends Component {
           <Heading size={6} textColor='tertiary'>
             Result
           </Heading>
-          <Image src={require('pattern-library-example.png')} margin='50px auto 0'/>
+          <Image src={require('pattern-library-example.png')} margin='50px auto 0' />
         </Slide>
 
         <Slide bgImage={require('what-is-my-purpose.png')} bgDarken={0.75}>
@@ -291,6 +294,52 @@ export default class Presentation extends Component {
         <Slide bgColor='tertiary'>
           <Heading fit caps textColor='primary'>
             Live coding!
+          </Heading>
+        </Slide>
+
+        <Slide>
+          <Heading size={6} textColor='tertiary'>
+            Resources
+          </Heading>
+          <List>
+            <ListItem>
+              <Link
+                href='https://github.com/thejameskyle/babel-handbook/blob/master/translations/en/plugin-handbook.md'
+                target='_blank'
+              >
+                The Babel Handbook
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href='https://github.com/babel/babel/tree/master/packages/babel-types'
+                target='_blank'
+              >
+                Babel Types
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href='https://github.com/kentcdodds/babel-plugin-preval'
+                target='_blank'
+              >
+                Babel Plugin Preval
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href='https://github.com/kentcdodds/babel-macros'
+                target='_blank'
+              >
+                Babel Macros
+              </Link>
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgImage={require('thats-all-folks.svg')} bgDarken={0.75}>
+          <Heading fit caps textColor='primary'>
+            Thanks!
           </Heading>
         </Slide>
       </Deck>
